@@ -1,7 +1,7 @@
 import { createContext, useReducer, useState, useEffect } from "react";
 
 import axios from "axios";
-import appReducer from "./AppReducer";
+import drinksReducer from "./drinksReducer";
 export const DrinksContext = createContext();
 
 const initialState = {
@@ -12,7 +12,7 @@ const initialState = {
 export const DrinksProvider = ({ children }) => {
   const [recipes, setRecipes] = useState([]);
 
-  const [drink, dispatch] = useReducer(appReducer, initialState);
+  const [drink, dispatch] = useReducer(drinksReducer, initialState);
 
   const addDrink = (drink) =>
     dispatch({

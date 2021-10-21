@@ -3,7 +3,7 @@ import { UsersContext } from "../context/UsersContext";
 import { Link, useHistory } from "react-router-dom";
 
 export const LoginForm = () => {
-  const { addAuthUser } = useContext(UsersContext);
+  const { authentication } = useContext(UsersContext);
 
   const [loginUser, setLoginUser] = useState({
     username: "",
@@ -23,7 +23,7 @@ export const LoginForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    addAuthUser(loginUser)
+    authentication(loginUser)
       ? history.push("/home")
       : alert("Incorrect password or user");
 

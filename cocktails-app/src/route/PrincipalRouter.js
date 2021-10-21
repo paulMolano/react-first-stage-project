@@ -13,7 +13,6 @@ import Register from "../pages/Register";
 export const PrincipalRouter = () => {
   const { authUser } = useContext(UsersContext);
   const { isAuth } = authUser;
-  console.log(isAuth);
 
   return (
     <>

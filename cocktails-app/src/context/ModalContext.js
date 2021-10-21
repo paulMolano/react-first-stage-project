@@ -1,11 +1,29 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useReducer } from "react";
 import axios from "axios";
+import modalReducer from "./modalReducer";
 
 export const ModalContext = createContext();
 
+const initialState = {
+  idrecipe: null,
+  newrecipe: {},
+};
+
 export const ModalProvider = ({ children }) => {
-  const [idrecipe, setIdrecipe] = useState(null);
-  const [newrecipe, setNewrecipe] = useState({});
+  const [recipes, dispatch] = useReducer(modalReducer, initialState);
+
+  const setIdrecipe = (id) =>
+    dispatch({
+      type: "SAVE_IDRECIPE",
+      payload: id,
+    });
+
+  const setNewrecipe = (recipe) =>
+    dispatch({
+      type: "SAVE_RECIPE",
+      payload: recipe,
+    });
+  const { idrecipe, newrecipe } = recipes;
 
   useEffect(() => {
     const obtainRecipe = async () => {

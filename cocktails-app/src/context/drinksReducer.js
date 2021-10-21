@@ -1,4 +1,4 @@
-export default function appReducer(state, action) {
+export default function drinksReducer(state, action) {
   switch (action.type) {
     case "SAVE_DRINK":
       return {

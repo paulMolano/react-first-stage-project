@@ -26,7 +26,6 @@ export const LoginForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    //settimeout spinner
     setLoading(true);
 
     setTimeout(() => {
@@ -34,13 +33,12 @@ export const LoginForm = () => {
       authentication(loginUser)
         ? history.push("/home")
         : alert("Incorrect password or user");
-
-      setLoginUser({
-        username: "",
-
-        password: "",
-      });
     }, 2000);
+    setLoginUser({
+      username: "",
+
+      password: "",
+    });
   };
 
   const { username, password } = loginUser;

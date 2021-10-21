@@ -3,7 +3,7 @@ export default function usersReducer(state, action) {
     case "SAVE_USER":
       return {
         ...state,
-        users: action.payload,
+        users: [...state.users, action.payload],
       };
     case "SAVE_AUTHUSER":
       return {

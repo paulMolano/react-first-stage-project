@@ -1,4 +1,4 @@
-import { createContext, useReducer, useState, useEffect } from "react";
+import { createContext, useReducer, useEffect } from "react";
 import usersReducer from "./usersReducer";
 
 export const UsersContext = createContext();
@@ -18,25 +18,17 @@ const UsersProvider = ({ children }) => {
     },
   };
 
-  /* const [users, setUsers] = useState(usersLS);
-  const [authUser, setAuthUser] = useState({
-    username: "",
-    password: "",
-    isAuth: false,
-  }); */
-
   const [userReducer, dispatch] = useReducer(usersReducer, initialState);
 
   const { users, authUser } = userReducer;
-  console.log(userReducer, users, authUser);
   const addUser = (newUser) => {
     dispatch({
       type: "SAVE_USER",
-      payload: { ...userReducer, newUser },
+      payload: { newUser },
     });
   };
   const authentication = (loggin) => {
-    console.log(users);
+    console.log(loggin);
     const userToLogin = users.find(
       (user) =>
         user.username === loggin.username && user.password === loggin.password
@@ -53,7 +45,7 @@ const UsersProvider = ({ children }) => {
 
   const addAuthUser = (loggin) => {
     dispatch({
-      type: "SAVE_USER",
+      type: "SAVE_AUTHUSER",
       payload: { ...loggin, isAuth: true },
     });
   };

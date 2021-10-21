@@ -23,7 +23,7 @@ const UsersProvider = ({ children }) => {
   };
 
   const addAuthUser = (loggin) => {
-    const userToLogin = usersLS.find(
+    const userToLogin = users.find(
       (user) =>
         user.username === loggin.username && user.password === loggin.password
     );

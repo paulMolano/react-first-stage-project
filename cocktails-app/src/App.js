@@ -7,15 +7,15 @@ import { PrincipalRouter } from "./route/PrincipalRouter";
 function App() {
   return (
     <>
-      <CategoryProvider>
-        <DrinksProvider>
-          <ModalProvider>
-            <UsersProvider>
+      <UsersProvider>
+        <CategoryProvider>
+          <DrinksProvider>
+            <ModalProvider>
               <PrincipalRouter />
-            </UsersProvider>
-          </ModalProvider>
-        </DrinksProvider>
-      </CategoryProvider>
+            </ModalProvider>
+          </DrinksProvider>
+        </CategoryProvider>
+      </UsersProvider>
     </>
   );
 }

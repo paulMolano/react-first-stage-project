@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { UsersContext } from "../context/UsersContext";
 import { Link, useHistory } from "react-router-dom";
 import { Spinner } from "../components/Spinner/Spinner";
-import { Formik } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 
 export const RegisterForm = () => {
   const history = useHistory();
@@ -11,31 +11,6 @@ export const RegisterForm = () => {
 
   const { addUser, addAuthUser } = useContext(UsersContext);
 
-  /* const [newuser, setNewUser] = useState({
-    email: "",
-    username: "",
-    password: "",
-  });
-
-  const handleChange = (e) => {
-    setNewUser({
-      ...newuser,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    addUser(newuser);
-    setNewUser({
-      email: "",
-      username: "",
-      password: "",
-    });
-    history.push("/");
-  };
-
-  const { email, username, password } = newuser; */
   return (
     <>
       <h2>Register</h2>
@@ -102,65 +77,65 @@ export const RegisterForm = () => {
           values,
           errors,
         }) => (
-          <form onSubmit={handleSubmit}>
+          <Form onSubmit={handleSubmit}>
             <div className="mb-3">
               <label htmlFor="email" className="form-label">
                 Email address
               </label>
-              <input
+              <Field
                 type="email"
                 className="form-control"
                 name="email"
                 aria-describedby="emailHelp"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.email}
                 required
               />
-              {touched.email && errors.email && (
-                <div className="alert alert-danger">{errors.email}</div>
-              )}
+              <ErrorMessage
+                name="email"
+                component={() => (
+                  <div className="alert alert-danger">{errors.email}</div>
+                )}
+              />
             </div>
             <div className="mb-3">
               <label htmlFor="username" className="form-label">
                 Username
               </label>
-              <input
+              <Field
                 type="text"
                 className="form-control"
                 name="username"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.username}
                 required
               />
-              {touched.username && errors.username && (
-                <div className="alert alert-danger">{errors.username}</div>
-              )}
+              <ErrorMessage
+                name="username"
+                component={() => (
+                  <div className="alert alert-danger">{errors.username}</div>
+                )}
+              />
             </div>
             <div className="mb-3">
               <label htmlFor="password" className="form-label">
                 Password
               </label>
-              <input
+              <Field
                 type="password"
                 className="form-control"
                 name="password"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.password}
                 required
               />
-              {touched.password && errors.password && (
-                <div className="alert alert-danger">{errors.password}</div>
-              )}
+              <ErrorMessage
+                name="password"
+                component={() => (
+                  <div className="alert alert-danger">{errors.password}</div>
+                )}
+              />
             </div>
             <button type="submit" className="btn btn-primary">
               Register
             </button>
             <Link to="/"> Have you and account?</Link>
             {loading ? <Spinner /> : null}
-          </form>
+          </Form>
         )}
       </Formik>
     </>

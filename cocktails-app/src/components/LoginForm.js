@@ -72,7 +72,7 @@ export const LoginForm = () => {
             required
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary mr-2">
           Log in
         </button>
         <Link to="/register"> New account? Click me</Link>

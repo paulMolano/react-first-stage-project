@@ -28,13 +28,14 @@ const UsersProvider = ({ children }) => {
       payload: { ...user },
     });
   };
-  const authentication = (loggin) => {
-    console.log(loggin);
+  const authentication = (loggin, userss = { users }) => {
+    const { users } = userReducer;
+    console.log(loggin.username, loggin.password);
     const userToLogin = users.find(
       (user) =>
         user.username === loggin.username && user.password === loggin.password
     );
-
+    console.log(userToLogin);
     if (userToLogin) {
       alert(`Welcome ${loggin.username}`);
 
@@ -56,7 +57,9 @@ const UsersProvider = ({ children }) => {
   }, [users]);
 
   return (
-    <UsersContext.Provider value={{ addUser, authentication, authUser }}>
+    <UsersContext.Provider
+      value={{ addUser, authentication, authUser, addAuthUser }}
+    >
       {children}
     </UsersContext.Provider>
   );

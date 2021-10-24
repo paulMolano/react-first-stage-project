@@ -4,7 +4,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Raleway Dots", cursive;
+  font-family: "Berkshire Swash", cursive;
   background-color: #e5e5e5;
   min-height: 100%;
   background: url(./img/LATIMES-PennyIce-V1.gif) center center no-repeat;
@@ -15,7 +15,7 @@ header {
   padding: 5rem 0;
 }
 h1 {
-  font-family: "Raleway Dots", cursive;
+  font-family: "Berkshire Swash", cursive;
   color: white;
   font-weight: 900;
   text-align: center;
@@ -23,4 +23,8 @@ h1 {
 }
 .form-control {
   max-width: 65vh;
+}
+h2,
+.btn {
+  font-family: "Berkshire Swash";
 }

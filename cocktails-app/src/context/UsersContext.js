@@ -37,8 +37,6 @@ const UsersProvider = ({ children }) => {
     );
     console.log(userToLogin);
     if (userToLogin) {
-      alert(`Welcome ${loggin.username}`);
-
       addAuthUser(loggin);
 
       return true;

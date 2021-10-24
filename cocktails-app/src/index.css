@@ -7,11 +7,12 @@ body {
   font-family: "Lato", sans-serif;
   background-color: #e5e5e5;
   min-height: 100%;
+  background-image: linear-gradient(to right, #fffbd5, #b20a2c);
 }
 header {
   background-color: #ec3a49;
   color: white;
-  padding: 5rem 0;
+  padding: 3rem 0;
 }
 h1 {
   color: white;

@@ -44,7 +44,7 @@ export const LoginForm = () => {
   const { username, password } = loginUser;
   return (
     <>
-      <h2>Log in</h2>
+      <h2 className="mt-5 mb-2">Log in</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="username" className="form-label" required>

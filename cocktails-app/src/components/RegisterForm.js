@@ -34,7 +34,7 @@ export const RegisterForm = () => {
   const { email, username, password } = newuser;
   return (
     <>
-      <h2>Register</h2>
+      <h2 className="mt-5 mb-2">Register</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="email" className="form-label">

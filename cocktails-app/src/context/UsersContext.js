@@ -21,10 +21,11 @@ const UsersProvider = ({ children }) => {
   const [userReducer, dispatch] = useReducer(usersReducer, initialState);
 
   const { users, authUser } = userReducer;
-  const addUser = (newUser) => {
+
+  const addUser = (user) => {
     dispatch({
       type: "SAVE_USER",
-      payload: { newUser },
+      payload: { ...user },
     });
   };
   const authentication = (loggin) => {

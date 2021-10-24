@@ -6,7 +6,12 @@ export const Header = () => {
 
   return (
     <header className="bg-alert">
-      <h1>Love Drinks {authUser ? <span>{authUser.username}</span> : null}</h1>
+      <h1>Cocktails</h1>
+      <h1>
+        {authUser.username !== ""
+          ? `Wellcome ${authUser.username}!`
+          : "Because everyone loves drinks"}{" "}
+      </h1>
     </header>
   );
 };

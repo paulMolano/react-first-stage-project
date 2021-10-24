@@ -9,7 +9,8 @@ body {
   min-height: 100%;
 }
 header {
-  background-color: #ec3a49;
+  background: url(./img/LATIMES-PennyIce-V1.gif) center center no-repeat;
+  background-size: cover;
   color: white;
   padding: 5rem 0;
 }

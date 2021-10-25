@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-first-stage-project/static/css/main.388791a8.chunk.css",
+    "main.js": "/react-first-stage-project/static/js/main.6d8d1445.chunk.js",
+    "main.js.map": "/react-first-stage-project/static/js/main.6d8d1445.chunk.js.map",
+    "runtime-main.js": "/react-first-stage-project/static/js/runtime-main.dd0c4d05.js",
+    "runtime-main.js.map": "/react-first-stage-project/static/js/runtime-main.dd0c4d05.js.map",
+    "static/js/2.2043af84.chunk.js": "/react-first-stage-project/static/js/2.2043af84.chunk.js",
+    "static/js/2.2043af84.chunk.js.map": "/react-first-stage-project/static/js/2.2043af84.chunk.js.map",
+    "static/js/3.317c0bcb.chunk.js": "/react-first-stage-project/static/js/3.317c0bcb.chunk.js",
+    "static/js/3.317c0bcb.chunk.js.map": "/react-first-stage-project/static/js/3.317c0bcb.chunk.js.map",
+    "index.html": "/react-first-stage-project/index.html",
+    "static/css/main.388791a8.chunk.css.map": "/react-first-stage-project/static/css/main.388791a8.chunk.css.map",
+    "static/js/2.2043af84.chunk.js.LICENSE.txt": "/react-first-stage-project/static/js/2.2043af84.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/react-first-stage-project/static/media/LATIMES-PennyIce-V1.12fe0480.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dd0c4d05.js",
+    "static/js/2.2043af84.chunk.js",
+    "static/css/main.388791a8.chunk.css",
+    "static/js/main.6d8d1445.chunk.js"
+  ]
+}
